@@ -2,8 +2,8 @@ import cv2 as cv
 
 img = cv.imread('../images/adele.jpg')
 gray_img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-faces = cv.CascadeClassifier('xml/haarcascade_face.xml')
-eyes = cv.CascadeClassifier('xml/haarcascade_eye.xml')
+faces = cv.CascadeClassifier('../xml/haarcascade_face.xml')
+eyes = cv.CascadeClassifier('../xml/haarcascade_eye.xml')
 result = faces.detectMultiScale(gray_img, scaleFactor=1.5, minNeighbors=3)
 for (x, y, w, h) in result:
     cv.rectangle(img, (x, y), (x + w, y + h), (0, 0, 187), thickness=8)
