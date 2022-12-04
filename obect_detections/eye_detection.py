@@ -1,6 +1,6 @@
 import cv2 as cv
 
-img = cv.imread('images/adele.jpg')
+img = cv.imread('../images/adele.jpg')
 gray_img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 faces = cv.CascadeClassifier('xml/haarcascade_face.xml')
 eyes = cv.CascadeClassifier('xml/haarcascade_eye.xml')
